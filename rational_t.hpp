@@ -1,14 +1,12 @@
-// AUTOR: 
-// FECHA: 
-// EMAIL: 
+// AUTOR: Álvaro Luis González
+// FECHA: 07/03/2025
+// EMAIL: alu0101575582@ull.edu.es
 // VERSION: 1.0
 // ASIGNATURA: Algoritmos y Estructuras de Datos
 // PRÁCTICA Nº: 2
 // COMENTARIOS: se indican entre [] las pautas de estilo aplicadas de
 //              "C++ Programming Style Guidelines"
 //              https://geosoft.no/development/cppstyle.html
-
-// pauta de estilo [92]: comentarios multilínea usando solo "//"
 
 #pragma once
 
