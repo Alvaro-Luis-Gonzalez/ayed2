@@ -23,6 +23,8 @@ public:
   ~vector_t();
   
   void resize(const int);
+
+  vector_t<T> even_positions() const;
   
   // getters
   T get_val(const int) const;
@@ -200,7 +202,15 @@ template<class T>
 T
 scal_prod(const vector_t<T>& v, const vector_t<T>& w)
 {
-  // rellenar código
+  assert(v.get_size() == w.get_size()); // Asegurar que los vectores tienen la misma dimensión
+
+  T result = T(); // Inicializar el resultado con el valor por defecto de T
+
+  for (int i = 0; i < v.get_size(); ++i) {
+    result = result + (v[i] * w[i]); // Sumar el producto de los elementos correspondientes
+  }
+
+  return result;
 }
 
 
@@ -208,5 +218,27 @@ scal_prod(const vector_t<T>& v, const vector_t<T>& w)
 double
 scal_prod(const vector_t<rational_t>& v, const vector_t<rational_t>& w)
 {
-  // rellenar código 
+  assert(v.get_size() == w.get_size()); // Asegurar que los vectores tienen la misma dimensión
+
+  double result = 0.0; // Inicializar el resultado como un double
+
+  for (int i = 0; i < v.get_size(); ++i) {
+    result = result + (v[i].value() * w[i].value()); // Sumar el producto de los valores de los racionales
+  }
+
+  return result;
+}
+
+template<class T>
+vector_t<T>
+vector_t<T>::even_positions() const {
+  int new_size = sz_ / 2; // Calcula el tamaño del nuevo vector (la mitad del tamaño original)
+
+  vector_t<T> even_vector(new_size); // Crea un nuevo vector con el tamaño calculado
+
+  for (int i = 1, j = 0; i < sz_; i += 2, j++) {
+    even_vector.set_val(j, v_[i]); // Copia los elementos de las posiciones pares al nuevo vector
+  }
+
+  return even_vector; // Devuelve el nuevo vector
 }

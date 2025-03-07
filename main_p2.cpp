@@ -61,6 +61,46 @@ int main()
   C.multiply(A, B);
   cout << "Multiplicación de matrices A y B: " << endl;
   C.write();
+
+
+  /* MODIFICACIONES
   
+  //Formar un vector nuevo con las posiciones pares
+  vector_t<double> v1(5);
+  v1.set_val(0, 1.1);
+  v1.set_val(1, 2.2);
+  v1.set_val(2, 3.3);
+  v1.set_val(3, 4.4);
+  v1.set_val(4, 5.5);
+
+  cout << "Vector original: " << endl;
+  v1.write();
+
+  vector_t<double> v3 = v1.even_positions();
+
+  cout << "Vector con posiciones pares: " << endl;
+  v3.write();
+
+  //Meter la diagonal principal de una matriz en un vector
+  matrix_t<double> A(3, 3);
+  A(1, 1) = 1.1;
+  A(1, 2) = 1.2;
+  A(1, 3) = 1.3;
+  A(2, 1) = 2.1;
+  A(2, 2) = 2.2;
+  A(2, 3) = 2.3;
+  A(3, 1) = 3.1;
+  A(3, 2) = 3.2;
+  A(3, 3) = 3.3;
+
+  cout << "Matriz A: " << endl;
+  A.write();
+
+  vector_t<double> diagonal = A.get_main_diagonal();
+
+  cout << "Diagonal principal de A: " << endl;
+  diagonal.write();
+  
+  */
   return 0;
 }

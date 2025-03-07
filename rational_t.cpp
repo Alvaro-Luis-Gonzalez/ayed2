@@ -140,7 +140,7 @@ rational_t::divide(const rational_t& r) const
 rational_t
 operator+(const rational_t& a, const rational_t& b)
 {
-  // rellenar código
+  return a.add(b); // Llama al método add para la suma
 }
 
 
@@ -148,7 +148,7 @@ operator+(const rational_t& a, const rational_t& b)
 rational_t
 operator-(const rational_t& a, const rational_t& b)
 {
-  // rellenar código
+  return a.substract(b); // Llama al método substract para la resta
 }
 
 
@@ -156,7 +156,7 @@ operator-(const rational_t& a, const rational_t& b)
 rational_t
 operator*(const rational_t& a, const rational_t& b)
 {
-  // rellenar código
+  return a.multiply(b); // Llama al método multiply para la multiplicación
 }
 
 
@@ -164,9 +164,8 @@ operator*(const rational_t& a, const rational_t& b)
 rational_t
 operator/(const rational_t& a, const rational_t& b)
 {
-  // rellenar código
+  return a.divide(b); // Llama al método divide para la división
 }
-
 
 
 // E/S
