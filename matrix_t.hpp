@@ -27,6 +27,8 @@ public:
   void resize(const int, const int);
 
   vector_t<T> get_main_diagonal() const;
+  T sum_secondary_diagonal() const;
+
   
   // getters
   int get_m(void) const;
@@ -216,4 +218,14 @@ matrix_t<T>::get_main_diagonal() const {
   }
 
   return diagonal; // Devolver el vector con la diagonal principal
+}
+
+template<class T>
+T
+matrix_t<T>::sum_secondary_diagonal() const {
+  T sum = T();
+  for (int i = 1; i <= get_m(); ++i) {
+    sum = sum + at(i, get_n() - i + 1);
+  }
+  return sum; // Devolver la suma
 }

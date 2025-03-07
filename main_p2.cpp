@@ -62,9 +62,19 @@ int main()
   cout << "Multiplicación de matrices A y B: " << endl;
   C.write();
 
+  // MODIFICACION PRACTICA
 
-  /* MODIFICACIONES
-  
+  matrix_t<double> D;
+  D.read();
+  cout << "Matriz D:" << endl;
+  D.write();
+
+  double sum_secondary = D.sum_secondary_diagonal(); 
+  cout << "Suma de la diagonal secundaria de D: " << sum_secondary << endl; 
+
+
+  /*MODIFICACIONES
+
   //Formar un vector nuevo con las posiciones pares
   vector_t<double> v1(5);
   v1.set_val(0, 1.1);
@@ -82,7 +92,7 @@ int main()
   v3.write();
 
   //Meter la diagonal principal de una matriz en un vector
-  matrix_t<double> A(3, 3);
+  matrix_t<double> D(3, 3);
   A(1, 1) = 1.1;
   A(1, 2) = 1.2;
   A(1, 3) = 1.3;
@@ -102,5 +112,6 @@ int main()
   diagonal.write();
   
   */
+
   return 0;
 }
